@@ -43,6 +43,31 @@ namespace ClassLibrary1
 
 
         }
-
+        //retorna el codigo de barras
+        public static explicit operator string(Producto p)
+        {
+            return p.codigoDeBarra;
+        }
+        //compara si son iguales los productos por codigo de barras y marca
+        public static bool operator ==(Producto p1, Producto p2)
+        {
+            return (p1.codigoDeBarra == p2.codigoDeBarra && p1.marca == p2.marca);
+        }
+        //compara si la marca ingresada por parametro es la misma del producto
+        public static bool operator ==(Producto p, string marca)
+        {
+            return p.marca == marca;
+        }
+        //compara si producto 1 es igual al 2 , si no son iguales retorna true .
+        public static bool operator !=(Producto p1,Producto p2)
+        {
+            return !(p1 == p2);
+        }
+        //compara si el producto y la marca son iguales , retorna true si no son iguales
+        public static bool operator !=(Producto p,string marca)
+        {
+            return !(p == marca);
+        }
+      
     }
 }
