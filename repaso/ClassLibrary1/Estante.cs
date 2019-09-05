@@ -42,6 +42,46 @@ namespace ClassLibrary1
 
             return retorno;
         }
-        public static bool operator ==(Estante e,)
+        //Igualdad, retornará true, si es que el producto ya se encuentra en el estante,
+        //false, caso contrario
+        public static bool operator ==(Estante e,Producto p)
+        {
+            foreach (Producto producto in e.GetProductos())
+            {
+                if (!(producto is null) && producto == p)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        //Adición, retornará true y agregará el producto si el estante posee capacidad 
+        //de almacenar al menos un producto más y dicho producto no se encuentra en él;
+        // false, caso contrario.Reutilizar código
+        public static bool operator +(Estante e,Producto p)
+        {
+            bool retorno = false;
+
+            // Si no se encuentra en el estante
+            if (e != p)
+            {
+                Producto[] productos = e.GetProductos();
+
+                for (int i = 0; i < e.GetProductos().Length; i++)
+                {
+                    // Si es null queda espacio.
+                    if (productos[i] is null)
+                    {
+                        productos[i] = p;
+                        retorno = true;
+                        break;
+                    }
+                }
+            }
+
+            return retorno;
+        }
     }
 }

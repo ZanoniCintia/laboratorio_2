@@ -8,13 +8,16 @@ namespace ClassLibrary1
 {
     public class Producto
     {
+        private string codigoDeBarra;
+        private string marca;
+        private float precio;
         #region Atributo
         private string codigoDeBarra;
         private string marca;
         private float precio;
         #endregion 
 
-        private Producto(string marca,string codigoDeBarra,float precio)
+        public Producto(string marca,string codigoDeBarra,float precio)
         {
             this.marca = marca;
             this.codigoDeBarra = codigoDeBarra;
