@@ -21,26 +21,28 @@ namespace ClassLibrary1
             this.productos = new Producto[capacidad];
         }
         
-        public Estante(int capacidad, int ubicacion):this(cantidad)
+        public Estante(int capacidad, int ubicacion):this(capacidad)
         {
             this.ubicacionEstante = ubicacion;
         }
 
         public static string MostrarEstante(Estante estante)
         {
-            string retorno = string.Empty;
-            retorno += String.Format("Estante. Ubicación: {0}\n", estante.ubicacionEstante);
-            retorno += "\nProductos: \n";
+           
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("Estante. Ubicación: {0}\n", estante.ubicacionEstante);
+            sb.AppendLine("Productos:");
 
             foreach (Producto producto in estante.GetProductos())
             {
                 if (!(producto is null))
                 {
-                    retorno += Producto.MostrarProducto(producto) + "\n";
+                    sb.AppendLine(Producto.MostrarProducto(producto));
+
                 }
             }
 
-            return retorno;
+            return sb.ToString();
         }
         //Igualdad, retornará true, si es que el producto ya se encuentra en el estante,
         //false, caso contrario
@@ -55,6 +57,13 @@ namespace ClassLibrary1
             }
 
             return false;
+        }
+
+        //se fija si no se encuentra en el estante
+        public static bool operator !=(Estante e,Producto p)
+        {
+            return !(e == p);
+
         }
 
         //Adición, retornará true y agregará el producto si el estante posee capacidad 
@@ -82,6 +91,27 @@ namespace ClassLibrary1
             }
 
             return retorno;
+        }
+
+        //Sustracción (Estante, Producto), retornará un estante sin el producto, siempre y cuando
+        //el producto se encuentre en el listado.Reutilizar código
+        public static Estante operator -(Estante e, Producto p)
+        {
+            if(e==p)
+            {
+                Producto[] productos = e.GetProductos();
+
+                for(int i=0;i<e.GetProductos().Length;i++)
+                {
+                    if(productos[i]==p)
+                    {
+                        productos[i] = null;
+                    }
+                }
+
+
+            }
+            return e;
         }
     }
 }

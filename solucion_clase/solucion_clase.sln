@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29215.179
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio_16", "ConsoleApp1\ejercicio_16.csproj", "{5602748C-BF3E-4321-AE4A-D34ED0D79E30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "..\repaso\ClassLibrary1\ClassLibrary1.csproj", "{81618860-2DFF-44AE-9A0D-D055CBAE41E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_05_campus", "..\repaso\repaso\Ejercicio_05_campus.csproj", "{0A248325-EB05-4EA2-98AE-B5C6A55A8452}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{81618860-2DFF-44AE-9A0D-D055CBAE41E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81618860-2DFF-44AE-9A0D-D055CBAE41E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81618860-2DFF-44AE-9A0D-D055CBAE41E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A248325-EB05-4EA2-98AE-B5C6A55A8452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A248325-EB05-4EA2-98AE-B5C6A55A8452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A248325-EB05-4EA2-98AE-B5C6A55A8452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A248325-EB05-4EA2-98AE-B5C6A55A8452}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

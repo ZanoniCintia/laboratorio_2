@@ -8,9 +8,7 @@ namespace ClassLibrary1
 {
     public class Producto
     {
-        private string codigoDeBarra;
-        private string marca;
-        private float precio;
+       
         #region Atributo
         private string codigoDeBarra;
         private string marca;
