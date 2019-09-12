@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio", "ejercicio\ejercicio.csproj", "{07EA1D5E-2964-4A9C-AD5D-EDBFFA621912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billetes", "Biblioteca_23\Billetes.csproj", "{680F2A0B-5C38-40FF-B752-6A10DA13B1CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07EA1D5E-2964-4A9C-AD5D-EDBFFA621912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07EA1D5E-2964-4A9C-AD5D-EDBFFA621912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07EA1D5E-2964-4A9C-AD5D-EDBFFA621912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07EA1D5E-2964-4A9C-AD5D-EDBFFA621912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680F2A0B-5C38-40FF-B752-6A10DA13B1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680F2A0B-5C38-40FF-B752-6A10DA13B1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680F2A0B-5C38-40FF-B752-6A10DA13B1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680F2A0B-5C38-40FF-B752-6A10DA13B1CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43D64152-27F6-43B4-90D3-AF7A3843F728}
+	EndGlobalSection
+EndGlobal
