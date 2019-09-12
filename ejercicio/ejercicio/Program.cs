@@ -11,14 +11,15 @@ namespace ejercicio
     {
         static void Main(string[] args)
         {
-            Euro e = new Euro(10);
+            Euro e = new Euro(10,1.16);
             Dolar d = new Dolar(10);
-            Pesos p = new Pesos(10);
+            Pesos p = new Pesos(10,38.33);
 
-            Dolar auxe = d + e;
-            Console.WriteLine("Euro +Dolar  : {0:#.00}",auxe.GetCantidad());
-            Pesos aux2 = p + e;
-            Console.WriteLine("Euro + Pesos : {0:#.00}", aux2.GetCantidad());
+            Euro auxe = e + d;
+            Console.WriteLine("Euro + Dolar  : {0:#.00}",auxe.GetCantidad());
+            auxe = e + p;
+            Console.WriteLine("Euro + Pesos : {0:#.00}", auxe.GetCantidad());
+
             Console.ReadKey();
         }
     }
