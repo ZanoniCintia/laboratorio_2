@@ -15,6 +15,13 @@ namespace MiCalculadora
         public Form1()
         {
             InitializeComponent();
+
+
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
