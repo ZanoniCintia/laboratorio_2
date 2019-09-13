@@ -1,6 +1,6 @@
 ﻿namespace MiCalculadora
 {
-    partial class Form1
+    partial class FormCalculadora
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -94,16 +94,18 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "+",
             "-",
             "*",
             "/"});
-            this.comboBox1.Location = new System.Drawing.Point(233, 126);
+            this.comboBox1.Location = new System.Drawing.Point(233, 111);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 21);
+            this.comboBox1.Size = new System.Drawing.Size(154, 49);
             this.comboBox1.TabIndex = 6;
+            this.comboBox1.Text = "+ - / *";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // textBox2
@@ -123,7 +125,7 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Resultado";
             // 
-            // Form1
+            // FormCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,8 +139,10 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Calculadora Zanoni Cintia 2c";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FormCalculadora";
+            this.Text = "Calculadora de Zanoni Cintia del curso 2c";
             this.ResumeLayout(false);
             this.PerformLayout();
 
