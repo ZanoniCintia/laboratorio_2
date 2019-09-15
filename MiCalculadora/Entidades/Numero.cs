@@ -133,11 +133,19 @@ namespace Entidades
         }
 
         //hacer
+<<<<<<< HEAD
         public string DecimalBinario(double numero)
         {
             return 0;
         }
 
+=======
+        /*public string DecimalBinario(double numero)
+        {
+            return 0;
+        }
+        */
+>>>>>>> a3704774686105aaef58765e592d544f7f55d2fb
 
 
         #endregion
