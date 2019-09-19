@@ -8,5 +8,8 @@ namespace libreria
 {
     class Negocio
     {
+        #region Fields
+        private string nombre;
+        #endregion
     }
 }
