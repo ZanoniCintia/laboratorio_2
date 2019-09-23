@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiblioteCentralTelefonica\BiblioteCentralTelefonica.csproj">
+      <Project>{174f3c8c-d5aa-47c9-931c-a35a3b23197b}</Project>
+      <Name>BiblioteCentralTelefonica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
