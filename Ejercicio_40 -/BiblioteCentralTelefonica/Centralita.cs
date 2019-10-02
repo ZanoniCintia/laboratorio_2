@@ -60,7 +60,7 @@ namespace BiblioteCentralTelefonica
         }
 
 
-        private float CalcularGanancia(Llamada.TipoLlamada tipo)
+        private  float CalcularGanancia(Llamada.TipoLlamada tipo)
         {
             float auxGanancias = 0;
 
@@ -68,7 +68,7 @@ namespace BiblioteCentralTelefonica
             {
                 if (tipo == Llamada.TipoLlamada.Local || tipo == Llamada.TipoLlamada.Todas && llamada is Local)
                 {
-                    auxGanancias = auxGanancias + ((Local)llamada).CostoLLamada;
+                    auxGanancias = auxGanancias + ((Local)llamada).CostoLlamada;
                 }
                 else if (tipo == Llamada.TipoLlamada.Provincial || tipo == Llamada.TipoLlamada.Todas && llamada is Provincial)
                 {
@@ -109,6 +109,44 @@ namespace BiblioteCentralTelefonica
         private void AgregarLlamada(Llamada nuevaLlamada)
         {
             this.listaLLamada.Add(nuevaLlamada);
+        }
+
+        public static bool operator ==(Centralita c,Llamada llamada)
+        {
+            bool retorno = false;
+            if(c!=null && llamada != null)
+            {
+                foreach(Llamada llamadas in c.listaLLamada )
+                {
+                    if(llamadas == llamada)
+                    {
+                        retorno = true;
+                        break;
+                    }
+                }
+            }
+            return retorno;
+        }
+
+        public static bool operator !=(Centralita c, Llamada llamada)
+        {
+            bool retorno = true;
+            if (c == llamada)
+            {
+                retorno = false;
+            }
+            return retorno;
+        }
+
+        public static Centralita operator +(Centralita c, Llamada llamada)
+        {
+            Centralita central = null;
+            if (c != llamada)
+            {
+                c.AgregarLlamada(llamada);
+                central = c;
+            }
+            return central;
         }
         #endregion
     }

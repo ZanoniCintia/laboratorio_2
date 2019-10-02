@@ -14,11 +14,11 @@ namespace BiblioteCentralTelefonica
         #endregion
 
         #region Properties
-        public float CostoLlamada
+        public override float CostoLlamada
         {
             get
             {
-                return CalcularCosto();
+                return this.CalcularCosto();
             }
         }
 
@@ -46,7 +46,7 @@ namespace BiblioteCentralTelefonica
 
                 
             }
-            retorno = costo * this.duracion;
+            retorno = costo * base.duracion;
             return retorno; 
         }
 

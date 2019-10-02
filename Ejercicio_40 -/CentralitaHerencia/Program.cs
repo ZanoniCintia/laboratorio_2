@@ -31,7 +31,7 @@ namespace CentralitaHerencia
             Console.WriteLine(c.Mostrar());
             Console.ReadKey();
 
-            object objeto = new object();
+           // object objeto = new object();
             
 
 

@@ -18,16 +18,16 @@ namespace BiblioteCentralTelefonica
         {
             get
             {
-                return CalcularCosto();
+                return this.CalcularCosto();
             }
         }
         #endregion 
 
         #region Methods
 
-        private float CalcularCosto()
+        private  float CalcularCosto()
         {
-            float valor = this.duracion * this.costo;
+            float valor = base.duracion * this.costo;
 
             return valor;
         }
