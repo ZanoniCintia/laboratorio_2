@@ -12,7 +12,7 @@ namespace Entidades_2018
     public sealed class Changuito
     {
         List<Producto> productos;
-        int espacioDisponible;
+        private int espacioDisponible;
         public enum ETipo
         {
             Dulce, Leche, Snacks, Todos
@@ -49,27 +49,31 @@ namespace Entidades_2018
         /// <param name="c">Elemento a exponer</param>
         /// <param name="ETipo">Tipos de ítems de la lista a mostrar</param>
         /// <returns></returns>
-        public string Mostrar(Changuito c, ETipo tipo)
+        public string Mostrar(Changuito carro, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", c.productos.Count, c.espacioDisponible);
+            sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", carro.productos.Count, carro.espacioDisponible);
             sb.AppendLine("");
-            foreach (Producto v in c.productos)
+            foreach (Producto producto1 in carro.productos)
             {
                 switch (tipo)
                 {
                     case ETipo.Snacks:
-                        sb.AppendLine(v.Mostrar());
+                        if (tipo == ETipo.Snacks && producto1 is Snacks)
+                        { sb.AppendLine(producto1.Mostrar()); }
                         break;
                     case ETipo.Dulce:
-                        sb.AppendLine(v.Mostrar());
+                        if (tipo == ETipo.Dulce && producto1 is Dulce)
+                        { sb.AppendLine(producto1.Mostrar()); }
                         break;
                     case ETipo.Leche:
-                        sb.AppendLine(v.Mostrar());
+                        if (tipo == ETipo.Leche && producto1 is Leche)
+                        { sb.AppendLine(producto1.Mostrar()); }
                         break;
+                
                     default:
-                        sb.AppendLine(v.Mostrar());
+                        sb.AppendLine(producto1.Mostrar());
                         break;
                 }
             }
@@ -85,20 +89,20 @@ namespace Entidades_2018
         /// <param name="c">Objeto donde se agregará el elemento</param>
         /// <param name="p">Objeto a agregar</param>
         /// <returns></returns>
-        public static Changuito operator +(Changuito c, Producto p)
+        public static Changuito operator +(Changuito carro, Producto producto)
         {
-            if (!(c is null) && !(p is null))
-            {
-                
-                    foreach (Producto v in c.productos)
+            
+                if (carro.productos.Count < carro.espacioDisponible)
+                {
+                    foreach (Producto producto1 in carro.productos)
                     {
-                        if (v == p)
-                            return c;
+                        if (producto1 == producto)
+                            return carro;
                     }
-                
+
+                carro.productos.Add(producto);
             }
-            c.productos.Add(p);
-            return c;
+               return carro;
         }
         /// <summary>
         /// Quitará un elemento de la lista
@@ -106,20 +110,18 @@ namespace Entidades_2018
         /// <param name="c">Objeto donde se quitará el elemento</param>
         /// <param name="p">Objeto a quitar</param>
         /// <returns></returns>
-        public static Changuito operator -(Changuito c, Producto p)
+        public static Changuito operator -(Changuito carro, Producto producto)
         {
-            if (!(c is null) && !(p is null))
-            {
-                foreach (Producto v in c.productos)
+                foreach (Producto producto1 in carro.productos)
                 {
-                    if (v == p)
+                    if (producto1 == producto)
                     {
-                        c.productos.Remove(p);
+                        carro.productos.Remove(producto);
                         break;
                     }
                 }
-            }
-            return c;
+           
+            return carro;
         }
         #endregion
     }
