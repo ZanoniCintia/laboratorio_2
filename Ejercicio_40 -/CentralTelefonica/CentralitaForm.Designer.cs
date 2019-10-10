@@ -1,6 +1,6 @@
-﻿namespace CentralTelefonica
+﻿namespace CentralitaForm
 {
-    partial class FormMostrar
+    partial class Central
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -37,69 +37,72 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(17, 28);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(34, 54);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 45);
+            this.button1.Size = new System.Drawing.Size(468, 87);
             this.button1.TabIndex = 0;
             this.button1.Text = "Generar Llamada";
             this.button1.UseVisualStyleBackColor = true;
-            
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(17, 87);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(34, 167);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(234, 45);
+            this.button2.Size = new System.Drawing.Size(468, 87);
             this.button2.TabIndex = 1;
             this.button2.Text = "Facturacion Total";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(17, 146);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(34, 281);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(234, 44);
+            this.button3.Size = new System.Drawing.Size(468, 85);
             this.button3.TabIndex = 2;
             this.button3.Text = "Facturacion Local";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(17, 212);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(34, 408);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(234, 45);
+            this.button4.Size = new System.Drawing.Size(468, 87);
             this.button4.TabIndex = 3;
             this.button4.Text = "Facturacion Provincial";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(17, 284);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Location = new System.Drawing.Point(34, 546);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(234, 45);
+            this.button5.Size = new System.Drawing.Size(468, 87);
             this.button5.TabIndex = 4;
             this.button5.Text = "Salir";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
-            // FormMostrar
+            // Central
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 390);
+            this.ClientSize = new System.Drawing.Size(536, 750);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "FormMostrar";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Central";
+            this.Text = "Central Telefonica";
             this.ResumeLayout(false);
 
         }

@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CentralitaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CentralitaForm.Designer.cs">
+      <DependentUpon>CentralitaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLLamador.cs">
       <SubType>Form</SubType>
@@ -58,10 +58,13 @@
     <Compile Include="FormLLamador.Designer.cs">
       <DependentUpon>FormLLamador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMostrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CentralitaForm.resx">
+      <DependentUpon>CentralitaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLLamador.resx">
       <DependentUpon>FormLLamador.cs</DependentUpon>
@@ -87,6 +90,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiblioteCentralTelefonica\BiblioteCentralTelefonica.csproj">
+      <Project>{174f3c8c-d5aa-47c9-931c-a35a3b23197b}</Project>
+      <Name>BiblioteCentralTelefonica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CentralitaHerencia\CentralitaHerencia.csproj">
+      <Project>{af9eff86-ae01-44c6-a968-589b9383871b}</Project>
+      <Name>CentralitaHerencia</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

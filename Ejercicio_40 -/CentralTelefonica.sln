@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralitaHerencia", "Centr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiblioteCentralTelefonica", "BiblioteCentralTelefonica\BiblioteCentralTelefonica.csproj", "{174F3C8C-D5AA-47C9-931C-A35A3B23197B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormMostrar", "CentralTelefonica\FormMostrar.csproj", "{17244583-B3BF-44B9-948E-84FCEADC2B50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Central", "CentralTelefonica\Central.csproj", "{17244583-B3BF-44B9-948E-84FCEADC2B50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
