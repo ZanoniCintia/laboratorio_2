@@ -79,6 +79,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Users\Dell-7480T\Desktop\Parcial\Parcial\Parcial.csproj">
+      <Project>{85a7a231-9e3b-43bf-ac57-c110e6d46840}</Project>
+      <Name>Parcial</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComiqueriaLogic\ComiqueriaLogic.csproj">
+      <Project>{bc375799-9d59-4636-bdd5-5cdae6d6c290}</Project>
+      <Name>ComiqueriaLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

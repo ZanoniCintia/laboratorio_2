@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entidad
+{
+    public class Singleton
+    {
+        private static Singleton instancia;
+
+        public Singleton Instancia
+        {
+            get
+            {
+                return CreateInstance();
+            }
+        }
+        public Singleton() //tengo como q tiene q ser privado
+        {
+
+        }
+
+        public static Singleton CreateInstance()
+        {
+            if(instancia == null)
+            {
+                return Singleton.instancia = new Singleton();
+                 
+            }
+            else { return instancia;  }
+        }
+        
+        /*
+        public sealed class Singleton
+        {
+            private readonly static Singleton _instance = new Singleton();
+            private Singleton()
+            {
+            }
+            public static Singleton Instance
+            {
+                get
+                {
+                    return _instance;
+                }
+            }            
+        } */
+    }
+}

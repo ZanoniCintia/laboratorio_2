@@ -21,6 +21,11 @@ namespace ComiqueriaLogic
             
         }
 
+        public static explicit operator Guid(Producto v)
+        {
+            throw new NotImplementedException();
+        }
+
         public double Precio
         {
             get { return Precio; }
