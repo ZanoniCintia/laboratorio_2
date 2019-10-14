@@ -11,7 +11,7 @@ namespace Entidades
         #region Campos
         protected int capacidadML;
         protected int contenidoML;
-        protected string Marca;
+        protected string marca;
         #endregion
 
         #region Propiedades
@@ -27,7 +27,7 @@ namespace Entidades
 
         public int Contenido
         {
-            get { return Contenido; }
+            get { return contenidoML; }
             set { contenidoML = value; }
         }
 
@@ -37,21 +37,27 @@ namespace Entidades
         {
             get
             {
-
-
-                return PorcentajeContenido;
-            } ///terminar
-            set { PorcentajeContenido = value; }
+                return (contenidoML*capacidadML)/100;
+            } 
+            
         }
 
         #endregion
 
         #region Metodos
-        protected  Botella(string marca,int capacidadML,int contenidoML)
+        protected Botella(string marca, int capacidadML, int contenidoML)
         {
-            this.Marca = marca;
-            this.capacidadML = capacidadML;
-            this.contenidoML = contenidoML;
+            this.marca = marca;
+            if (contenidoML < capacidadML)
+            {
+                this.capacidadML = capacidadML;
+                this.contenidoML = contenidoML;
+            }
+            else if (capacidadML < contenidoML)
+            {
+                this.contenidoML = capacidadML;
+                this.capacidadML = capacidadML;
+            }
 
 
         }
@@ -62,21 +68,19 @@ namespace Entidades
 
             sb.AppendFormat("Capacidad : {0}",this.capacidadML );
             sb.AppendFormat("Contenido : {0} ",this.contenidoML );
-            sb.AppendFormat("Marca: {0}", this.Marca);
+            sb.AppendFormat("Marca: {0}", this.marca);
 
             return sb.ToString();
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            return GenerarInforme();
+            return this.GenerarInforme();
             
         }
 
-      /*  public abstract int ServirMedida()
-        {
-            return 
-        }*/
+        public abstract int ServirMedida();
+      
         #endregion
 
         public enum Tipo
