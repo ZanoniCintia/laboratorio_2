@@ -51,10 +51,6 @@
       <Project>{52d0de5b-abfb-404a-b815-0493b4970f57}</Project>
       <Name>ControlesUsuario</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FrmCantina\FrmCantina.csproj">
-      <Project>{5b9cb555-f796-431f-a277-221c238a4a20}</Project>
-      <Name>FrmCantina</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
