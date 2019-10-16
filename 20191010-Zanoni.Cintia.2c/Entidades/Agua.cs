@@ -8,14 +8,14 @@ namespace Entidades
 {
     public class Agua : Botella
     {
-        private const int medida=40;
+        private const int medida=400;
 
         public Agua(string marca,int capacidadML ,int contenidoML): base (marca,capacidadML,contenidoML)
         {
 
         }
 
-        protected override string GenerarInforme()
+        protected new string GenerarInforme()
         {
             
             return base.ToString();
@@ -23,21 +23,24 @@ namespace Entidades
         }
         public int ServirMedida(int medida)
         {
-            return contenidoML - medida;
+            int retorno;
+            if (medida <= Contenido)
+            {
+               Contenido = Contenido - medida;
+               retorno = medida;
+            }
+            else
+            {
+                Contenido = Contenido - Contenido;
+                retorno = Contenido;
+            }
+            return retorno;
+            
         }
 
         public override int ServirMedida()
         {
-            if (medida >= Contenido)
-            {
-                Contenido=Contenido-medida ;
-
-            }
-            else if (medida > Contenido)
-            {
-                Contenido=Contenido-Contenido ;
-            }
-            return Contenido;
+            return ServirMedida(medida);
         }
         
         

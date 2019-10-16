@@ -31,12 +31,13 @@ namespace Entidades
             if (singleton is null)
             {
                 singleton = new Cantina(espacios);
-                return singleton;
+             
             }
             else
             {
-                return singleton;
+               singleton.espaciosTotales = espacios;
             }
+            return singleton;
         }
 
         public static bool operator +(Cantina c, Botella b)

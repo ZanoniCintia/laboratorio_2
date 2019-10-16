@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5B9CB555-F796-431F-A277-221C238A4A20}</ProjectGuid>
+    <ProjectGuid>{0E40493D-4565-43D1-9ADA-F046E924A5DE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>FrmCantina</RootNamespace>
     <AssemblyName>FrmCantina</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>

@@ -21,7 +21,7 @@ namespace Entidades
             this.tipo = tipo;
         }
 
-        protected override string GenerarInforme()
+        protected new string GenerarInforme()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("CERVEZA");
@@ -33,7 +33,19 @@ namespace Entidades
 
         public override int ServirMedida()
         {
-            return Contenido - (int)(medida * 0.80);
+            int retorno;
+            if (medida <= Contenido)
+            {
+                Contenido = Contenido - (medida * 80)/100;
+                retorno = medida;
+
+            }
+            else
+            {
+                Contenido = Contenido - Contenido;
+                retorno = Contenido;
+            }
+            return retorno;
         }
 
         public static implicit operator Botella.Tipo(Cerveza cerveza)

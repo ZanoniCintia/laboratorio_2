@@ -48,12 +48,12 @@ namespace Entidades
         protected Botella(string marca, int capacidadML, int contenidoML)
         {
             this.marca = marca;
-            if (contenidoML < capacidadML)
+            if (contenidoML <= capacidadML)
             {
                 this.capacidadML = capacidadML;
                 this.contenidoML = contenidoML;
             }
-            else if (capacidadML < contenidoML)
+            else
             {
                 this.contenidoML = capacidadML;
                 this.capacidadML = capacidadML;
