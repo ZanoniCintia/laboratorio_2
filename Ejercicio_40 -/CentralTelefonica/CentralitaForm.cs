@@ -23,6 +23,11 @@ namespace CentralitaForm
             }
 
         }
+        public Central()
+        {
+            InitializeComponent();
+
+        }
         public Central (Centralita center) : this()
         {
             this.centralita = center;
@@ -35,7 +40,7 @@ namespace CentralitaForm
             Local l1 = new Local("Bernal", 30, "Rosario", 2.65f);
             Provincial l2 = new Provincial(Provincial.Franja.Franja_1, "Morón", 21, "Bernal");
             Local l3 = new Local("Lanús", 45, "San Rafael", 1.99f);
-            Provincial l4 = new Provincial(Provincial.Franja.Franja_3, l2);
+            Provincial l4 = new Provincial(Provincial.Franja.Franja_3, "Avellaneda", 12,"quilmes");
             c += l1;
             c += l2;
             c += l3;
@@ -49,11 +54,7 @@ namespace CentralitaForm
             centralita = SimularCentral();
         }
 
-        public Central(Central central)
-        {
-            InitializeComponent();
-            centralita = central;
-        }
+       
 
         private void Button5_Click(object sender, EventArgs e)
         {

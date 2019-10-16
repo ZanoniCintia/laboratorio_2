@@ -62,13 +62,13 @@ namespace BiblioteCentralTelefonica
             return sb.ToString();
 
         }
-        public Provincial(Franja miFranja,Llamada llamada):this(miFranja ,llamada.NroOrigen,llamada.Duracion,llamada.NroDestino)
+        public Provincial(string text, Franja miFranja, Llamada llamada) : this(miFranja, llamada.NroOrigen, llamada.Duracion, llamada.NroDestino)
         {
-
+            this.franjaHoraria = miFranja;
         }
         public Provincial(Franja miFranja, string origen, float duracion,string destino):base(duracion,destino,origen)
         {
-
+            this.franjaHoraria = miFranja;
         }
         #endregion
 

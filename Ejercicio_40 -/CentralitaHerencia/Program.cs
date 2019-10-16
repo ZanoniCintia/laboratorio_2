@@ -16,7 +16,7 @@ namespace CentralitaHerencia
             Local l1 = new Local("Bernal", 30, "Rosario", 2.65f);
             Provincial l2 = new Provincial(Provincial.Franja.Franja_1,"Morón",  21, "Bernal");
             Local l3 = new Local("Lanús", 45, "San Rafael", 1.99f);
-            Provincial l4 = new Provincial(Provincial.Franja.Franja_3, l2);
+            Provincial l4 = new Provincial(Provincial.Franja.Franja_3,"Avellaneda", 12,"Quilmes");
             // Las llamadas se irán registrando en la Centralita.
             // La centralita mostrará por pantalla todas las llamadas según las vaya registrando.
             c.Llamadas.Add(l1);

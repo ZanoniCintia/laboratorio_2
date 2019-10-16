@@ -134,21 +134,41 @@ namespace CentralTelefonica
 
         private void ButtonLlamar_Click(object sender, EventArgs e)
         {
-            Random aux = new Random();
-            float duracion = (float)aux.Next(1, 50);
-            Llamada llamada;
-            if (txtNroDestino.Text.StartsWith("#"))
+            Random random = new Random();
+            float duracion = random.Next(1, 50);
+            string mensaje = string.Empty;
+            //Llamada llamada;
+            if (txtNroDestino.Text != "Nro Destino" && txtNroOrigen.Text != "Nro Origen")
             {
-                Provincial.Franja franja;
-                Enum.TryParse<Provincial.Franja>(cmbFranja.SelectedValue.ToString(), out franja);
-                llamada = new Provincial(franja, txtNroOrigen.Text, duracion, txtNroDestino.Text);
+                if (txtNroDestino.Text.StartsWith("#"))
+                {
+                    cmbFranja.DataSource = Enum.GetValues(typeof(Provincial.Franja));
+                    Provincial.Franja franja;
+                    Enum.TryParse(cmbFranja.SelectedValue.ToString(), out franja);
+                    Provincial aux = new Provincial(franja,txtNroOrigen.Text, duracion, txtNroDestino.Text);
+
+                }
+                else
+                {
+                    cmbFranja.Enabled = false;
+                    float costo = (float)((random.Next(50, 56)) / 100);
+                    Local aux = new Local(txtNroOrigen.Text, duracion, txtNroDestino.Text, costo);
+                }
+                mensaje = "Llamada creada exitosamente!";
+                ButtonLimpiar_Click(sender, e);
             }
             else
             {
-                float costo = (aux.Next(50, 60) / 100) * duracion;
-                llamada = new Local(txtNroOrigen.Text, duracion, txtNroDestino.Text, costo);
+                mensaje = "Debe cargar numero origen y destino";
             }
-            miniCentral.Llamadas.Add(llamada);
+            MessageBox.Show(mensaje);
+
+        }
+
+        private void ButtonLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNroDestino.Text = "Nro Destino";
+            txtNroOrigen.Text = "Nro Origen";
         }
     }
 }
