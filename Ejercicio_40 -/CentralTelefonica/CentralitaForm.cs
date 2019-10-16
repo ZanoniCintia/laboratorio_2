@@ -49,9 +49,10 @@ namespace CentralitaForm
             centralita = SimularCentral();
         }
 
-        public Central()
+        public Central(Central central)
         {
             InitializeComponent();
+            centralita = central;
         }
 
         private void Button5_Click(object sender, EventArgs e)
@@ -111,6 +112,11 @@ namespace CentralitaForm
 
             }
             MessageBox.Show(aux);
+        }
+
+        private void Central_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

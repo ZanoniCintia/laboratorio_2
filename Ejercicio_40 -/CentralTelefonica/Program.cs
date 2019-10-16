@@ -19,7 +19,7 @@ namespace CentralitaForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMostrar());
+            Application.Run(new Central());
         }
     }
 }

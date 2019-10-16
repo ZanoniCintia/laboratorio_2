@@ -58,9 +58,6 @@
     <Compile Include="FormLLamador.Designer.cs">
       <DependentUpon>FormLLamador.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMostrar.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CentralitaForm.resx">

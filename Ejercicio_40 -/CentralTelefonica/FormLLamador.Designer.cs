@@ -217,6 +217,7 @@
             this.buttonLlamar.TabIndex = 13;
             this.buttonLlamar.Text = "Llamar";
             this.buttonLlamar.UseVisualStyleBackColor = true;
+            this.buttonLlamar.Click += new System.EventHandler(this.ButtonLlamar_Click);
             // 
             // buttonLimpiar
             // 
@@ -262,6 +263,7 @@
             this.txtNroDestino.Size = new System.Drawing.Size(564, 55);
             this.txtNroDestino.TabIndex = 17;
             this.txtNroDestino.Text = "Nro Destino";
+            this.txtNroDestino.Click += new System.EventHandler(this.TxtNroDestino_Click);
             this.txtNroDestino.TextChanged += new System.EventHandler(this.TxtNroDestino_TextChanged);
             // 
             // txtNroOrigen
@@ -273,6 +275,7 @@
             this.txtNroOrigen.Size = new System.Drawing.Size(240, 55);
             this.txtNroOrigen.TabIndex = 18;
             this.txtNroOrigen.Text = "Nro Origen";
+            this.txtNroOrigen.Click += new System.EventHandler(this.TxtNroOrigen_Click);
             // 
             // FormLLamador
             // 
@@ -301,6 +304,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormLLamador";
             this.Text = "FormLLamador";
+            this.Load += new System.EventHandler(this.FormLLamador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

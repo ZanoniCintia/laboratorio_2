@@ -103,6 +103,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Central";
             this.Text = "Central Telefonica";
+            this.Load += new System.EventHandler(this.Central_Load_1);
             this.ResumeLayout(false);
 
         }

@@ -14,24 +14,23 @@ namespace CentralTelefonica
 {
     public partial class FormLLamador : Form
     {
-        Centralita llamada;
+        Centralita miniCentral;
         TextBox txtFoco = new TextBox();
 
-        public Centralita Llamada
+        public Centralita MiniCentral
         {
             get
             {
-                return llamada;
+                return miniCentral;
             }
         }
-        public FormLLamador()
-        {
-            InitializeComponent();
-        }
-
         public FormLLamador(Centralita centralita)
         {
+            InitializeComponent();
+            miniCentral = centralita;
         }
+
+ 
 
         private void ButtonAsterisco_Click(object sender, EventArgs e)
         {
@@ -40,7 +39,7 @@ namespace CentralTelefonica
 
         private void ButtonSalir_Click(object sender, EventArgs e)
         {
-            //Form aux = new (llamada);
+            
             this.Close();
         }
 
@@ -116,6 +115,40 @@ namespace CentralTelefonica
         private void Button3_Click(object sender, EventArgs e)
         {
             LimpiarOConcatenar("3");
+        }
+
+        private void FormLLamador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNroDestino_Click(object sender, EventArgs e)
+        {
+            txtFoco = txtNroDestino;
+        }
+
+        private void TxtNroOrigen_Click(object sender, EventArgs e)
+        {
+            txtFoco = txtNroOrigen;
+        }
+
+        private void ButtonLlamar_Click(object sender, EventArgs e)
+        {
+            Random aux = new Random();
+            float duracion = (float)aux.Next(1, 50);
+            Llamada llamada;
+            if (txtNroDestino.Text.StartsWith("#"))
+            {
+                Provincial.Franja franja;
+                Enum.TryParse<Provincial.Franja>(cmbFranja.SelectedValue.ToString(), out franja);
+                llamada = new Provincial(franja, txtNroOrigen.Text, duracion, txtNroDestino.Text);
+            }
+            else
+            {
+                float costo = (aux.Next(50, 60) / 100) * duracion;
+                llamada = new Local(txtNroOrigen.Text, duracion, txtNroDestino.Text, costo);
+            }
+            miniCentral.Llamadas.Add(llamada);
         }
     }
 }
