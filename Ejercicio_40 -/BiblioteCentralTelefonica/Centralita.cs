@@ -114,11 +114,11 @@ namespace BiblioteCentralTelefonica
         public static bool operator ==(Centralita c,Llamada llamada)
         {
             bool retorno = false;
-            if(c!=null && llamada != null)
+            if(!(c is null) && !(llamada is null))
             {
-                foreach(Llamada llamadas in c.listaLLamada )
+                foreach(Llamada llamadaAux in c.listaLLamada )
                 {
-                    if(llamadas == llamada)
+                    if(llamadaAux == llamada)
                     {
                         retorno = true;
                         break;
@@ -145,6 +145,9 @@ namespace BiblioteCentralTelefonica
             {
                 c.AgregarLlamada(llamada);
                 central = c;
+            }else
+            {
+                throw new CentralitaException("Llamada Registrada \n" +llamada.ToString(),"Clase Centralita \n","Operador + \n" );
             }
             return central;
         }

@@ -23,15 +23,16 @@ namespace CentralitaForm
             }
 
         }
+        public Central(Centralita center):this()
+        {
+            
+            this.centralita = center;
+        }
         public Central()
         {
             InitializeComponent();
+        }
 
-        }
-        public Central (Centralita center) : this()
-        {
-            this.centralita = center;
-        }
         private static Centralita SimularCentral()
         {
             // Mi central 

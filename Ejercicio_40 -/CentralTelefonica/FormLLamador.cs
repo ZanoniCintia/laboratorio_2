@@ -39,7 +39,7 @@ namespace CentralTelefonica
 
         private void ButtonSalir_Click(object sender, EventArgs e)
         {
-            
+               
             this.Close();
         }
 
@@ -117,10 +117,7 @@ namespace CentralTelefonica
             LimpiarOConcatenar("3");
         }
 
-        private void FormLLamador_Load(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void TxtNroDestino_Click(object sender, EventArgs e)
         {
@@ -137,7 +134,7 @@ namespace CentralTelefonica
             Random random = new Random();
             float duracion = random.Next(1, 50);
             string mensaje = string.Empty;
-            //Llamada llamada;
+            Llamada llamada;
             if (txtNroDestino.Text != "Nro Destino" && txtNroOrigen.Text != "Nro Origen")
             {
                 if (txtNroDestino.Text.StartsWith("#"))
@@ -145,15 +142,16 @@ namespace CentralTelefonica
                     cmbFranja.DataSource = Enum.GetValues(typeof(Provincial.Franja));
                     Provincial.Franja franja;
                     Enum.TryParse(cmbFranja.SelectedValue.ToString(), out franja);
-                    Provincial aux = new Provincial(franja,txtNroOrigen.Text, duracion, txtNroDestino.Text);
+                    llamada = new Provincial(franja,txtNroOrigen.Text, duracion, txtNroDestino.Text);
 
                 }
                 else
                 {
                     cmbFranja.Enabled = false;
                     float costo = (float)((random.Next(50, 56)) / 100);
-                    Local aux = new Local(txtNroOrigen.Text, duracion, txtNroDestino.Text, costo);
+                    llamada = new Local(txtNroOrigen.Text, duracion, txtNroDestino.Text, costo);
                 }
+                miniCentral.Llamadas.Add(llamada);
                 mensaje = "Llamada creada exitosamente!";
                 ButtonLimpiar_Click(sender, e);
             }
@@ -169,6 +167,12 @@ namespace CentralTelefonica
         {
             txtNroDestino.Text = "Nro Destino";
             txtNroOrigen.Text = "Nro Origen";
+        }
+
+        private void Button0_Click(object sender, EventArgs e)
+        {
+            LimpiarOConcatenar("0");
+
         }
     }
 }

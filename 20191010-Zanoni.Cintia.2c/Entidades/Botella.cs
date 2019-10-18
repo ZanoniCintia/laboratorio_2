@@ -37,7 +37,7 @@ namespace Entidades
         {
             get
             {
-                return (contenidoML*capacidadML)/100;
+                return (contenidoML* 100)/capacidadML;
             } 
             
         }
@@ -66,9 +66,10 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendFormat("Capacidad : {0}",this.capacidadML );
-            sb.AppendFormat("Contenido : {0} ",this.contenidoML );
-            sb.AppendFormat("Marca: {0}", this.marca);
+            sb.AppendFormat("Capacidad : {0}\n",this.capacidadML );
+            sb.AppendFormat("Contenido : {0} \n", this.contenidoML );
+            sb.AppendFormat("Marca: {0}\n", this.marca);
+            sb.AppendFormat("Porcentaje contenido : {0} %", this.PorcentajeContenido);
 
             return sb.ToString();
         }

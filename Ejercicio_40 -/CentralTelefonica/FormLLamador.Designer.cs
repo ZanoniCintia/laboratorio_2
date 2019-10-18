@@ -179,6 +179,7 @@
             this.button0.TabIndex = 10;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
+            this.button0.Click += new System.EventHandler(this.Button0_Click);
             // 
             // buttonNumeral
             // 
@@ -305,7 +306,6 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormLLamador";
             this.Text = "FormLLamador";
-            this.Load += new System.EventHandler(this.FormLLamador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
