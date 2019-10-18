@@ -40,9 +40,7 @@ namespace BiblioteCentralTelefonica
 
         }
 
-       /* public CentralitaException(string message, object  ) : base(message)
-        {
-        }*/
+       
         #endregion
     }
 }
