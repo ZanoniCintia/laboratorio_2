@@ -11,7 +11,9 @@ namespace Ejercicio_30
     {
         static void Main(string[] args)
         {
-            Competencia c = new Competencia();
+
+           
+
         }
     }
 }

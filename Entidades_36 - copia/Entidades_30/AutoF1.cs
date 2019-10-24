@@ -41,7 +41,7 @@ namespace Entidades_30
         public static bool operator ==(AutoF1 a1, AutoF1 a2)
         {
             bool retorno = false;
-            if (a1.escuderia == a2.escuderia && a1.numero == a2.numero 
+            if (a1.Escuderia == a2.Escuderia && a1.Numero == a2.Numero 
                 && a1.caballosDeFuerza == a2.caballosDeFuerza)
             {
                 retorno = true;
@@ -57,5 +57,5 @@ namespace Entidades_30
 
     }
 
-   
+    
 }
