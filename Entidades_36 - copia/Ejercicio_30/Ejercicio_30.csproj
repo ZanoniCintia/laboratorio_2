@@ -49,11 +49,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Entidades_30\Entidades_30.csproj">
-      <Project>{0529aee4-8e43-4165-a6de-4387bfbc6d7d}</Project>
-      <Name>Entidades_30</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
