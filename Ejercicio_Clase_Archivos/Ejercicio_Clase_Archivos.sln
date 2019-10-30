@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2047
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchivoLocoForm", "ArchivoLocoForm\ArchivoLocoForm.csproj", "{50D6E563-3B39-4866-B1CF-AEA9B7A87932}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{0E338206-908E-4B08-85F9-18825A581E59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{50D6E563-3B39-4866-B1CF-AEA9B7A87932}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50D6E563-3B39-4866-B1CF-AEA9B7A87932}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50D6E563-3B39-4866-B1CF-AEA9B7A87932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E338206-908E-4B08-85F9-18825A581E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E338206-908E-4B08-85F9-18825A581E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E338206-908E-4B08-85F9-18825A581E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E338206-908E-4B08-85F9-18825A581E59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,5 +12,10 @@ namespace ArchivoLocoForm
         {
             InitializeComponent();
         }
+
+        private void ButtonGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
