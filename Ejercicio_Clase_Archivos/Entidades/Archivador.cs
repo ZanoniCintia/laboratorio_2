@@ -11,41 +11,35 @@ namespace Entidades
     {
         public static void GuardarTexto(string path,bool sobreescribe,string nombreTexto,string texto)
         {
+            //using(streamWriter sw= new streamWriter (path)){}
 
-            if (!(path is null) && !(nombreTexto is null))
+            if (Directory.Exists(path))
             {
-                if (Directory.Exists(path))
-                {
-                    StreamWriter aux = new StreamWriter(path + "\\" + nombreTexto + ".txt", sobreescribe);
-                    aux.Write(nombreTexto);
-                    aux.Close();
 
-                }
-                else
-                {
-                    throw new Exception("Path invalido");
-                }
+                StreamWriter aux = new StreamWriter(path + "\\" + nombreTexto + ".txt", sobreescribe);
+                aux.Write(texto);
+                
+                aux.Close();
+
             }
+            else
+            {
+                throw new Exception("Ruta Invalida");
+            }
+            
         }
         public static string LeeArchivo(string archivoPath)
         {
-            string retorno="";
-
-            if (!(archivoPath is null))
+                string retorno="";
+            if (File.Exists(archivoPath))
             {
-                if (!Directory.Exists(archivoPath))
-                {
-                    throw new Exception("Archivo invalido");
-
-                }
-                else
-                {
-                    StringReader aux = new StringReader(archivoPath);
-                    retorno = aux.ReadToEnd();
-                    aux.Close();
-                }
+                StringReader aux = new StringReader(archivoPath);
+                retorno = aux.ReadToEnd();
+                aux.Close();
             }
-            return retorno; 
+            
+            return retorno;
+
         }
     }  
 }

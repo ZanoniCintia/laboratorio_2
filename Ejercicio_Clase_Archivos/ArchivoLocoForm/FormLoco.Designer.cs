@@ -38,7 +38,7 @@
             // richTextBoxTexto
             // 
             this.richTextBoxTexto.Location = new System.Drawing.Point(26, 44);
-            this.richTextBoxTexto.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richTextBoxTexto.Margin = new System.Windows.Forms.Padding(6);
             this.richTextBoxTexto.Name = "richTextBoxTexto";
             this.richTextBoxTexto.Size = new System.Drawing.Size(552, 271);
             this.richTextBoxTexto.TabIndex = 0;
@@ -57,7 +57,7 @@
             // buttonGuardar
             // 
             this.buttonGuardar.Location = new System.Drawing.Point(270, 331);
-            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(6);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(150, 44);
             this.buttonGuardar.TabIndex = 2;
@@ -68,12 +68,13 @@
             // buttonLeer
             // 
             this.buttonLeer.Location = new System.Drawing.Point(432, 331);
-            this.buttonLeer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonLeer.Margin = new System.Windows.Forms.Padding(6);
             this.buttonLeer.Name = "buttonLeer";
             this.buttonLeer.Size = new System.Drawing.Size(150, 44);
             this.buttonLeer.TabIndex = 4;
             this.buttonLeer.Text = "Leer";
             this.buttonLeer.UseVisualStyleBackColor = true;
+            this.buttonLeer.Click += new System.EventHandler(this.ButtonLeer_Click);
             // 
             // openFileDialog2
             // 
@@ -89,7 +90,7 @@
             this.Controls.Add(this.labelTexto);
             this.Controls.Add(this.richTextBoxTexto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormLoco";
             this.Text = "Clase Archivos";
             this.ResumeLayout(false);
