@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntidadesAbstractas
 {
+    #pragma warning disable CS0660, CS0661, CS0659
     public abstract class Universitario:Persona
     {
         #region Campos
@@ -15,18 +16,29 @@ namespace EntidadesAbstractas
         #region Metodos
         public  override bool  Equals(object obj)
         {
-            return true;//preguntar
+            bool retorno = false;
+            if(!(obj is null))
+            {
+                if(obj is Universitario)
+                {
+                    retorno = true;
+                }
+            }
+            return retorno;
         }
 
         protected virtual string MostrarDatos()
         {
-            return base.ToString();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(base.ToString());
+            sb.AppendFormat("Legajo : {0}\n",legajo);
+            return sb.ToString();
         }
 
         public static bool operator ==(Universitario pg1, Universitario pg2)
         {
             bool retorno = false;
-            if (pg1.legajo == pg2.legajo && pg1.DNI == pg2.DNI)
+            if (pg1.Equals(pg2) &&  (pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI))
             {
                 retorno = true;
             }
@@ -39,7 +51,7 @@ namespace EntidadesAbstractas
         }
         protected abstract string ParticiparEnClase();
 
-        public Universitario()
+        public Universitario():base()
         {
 
         }

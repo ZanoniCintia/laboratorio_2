@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.RegularExpressions;
+using Excepciones;
 
 namespace EntidadesAbstractas
 {
@@ -21,11 +21,7 @@ namespace EntidadesAbstractas
         {
             get
             {
-                Regex aux = new Regex(@"^[a-zA-Z]+$");
-                if (!aux.IsMatch(apellido))
-                {
-                    Console.WriteLine("Debe ingresar solo letras");
-                }
+             
                 return this.apellido;
             }
             set { apellido = value; }
@@ -53,22 +49,20 @@ namespace EntidadesAbstractas
         {
             get
             {
-                Regex aux = new Regex(@"^[a-zA-Z]+$");
-                if (!aux.IsMatch(nombre))
-                {
-                    Console.WriteLine("Debe ingresar solo letras"); 
-                }
+              
                 return this.nombre;
                
             }
             set { nombre = value; }
         }
 
-        public string StringToDni//preguntar
+        public string StringToDni
         {
             
-            set {  value= dni.ToString(); }
+            set { dni = ValidarDni(this.nacionalidad,value); }
         }
+      
+
 
 
         #endregion
@@ -93,10 +87,10 @@ namespace EntidadesAbstractas
         }
 
         public Persona(string nombre, string apellido, string dni,
-            ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
+            ENacionalidad nacionalidad) : this(nombre, apellido,int.Parse(dni),nacionalidad)
         {
 
-           // this.dni = dni;
+           
         }
 
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
@@ -110,7 +104,8 @@ namespace EntidadesAbstractas
             {
                 retorno = dato;
             }
-            else { //lanzar excepcion
+            else {
+                throw new DniInvalidoException();
             }
            
             return retorno;
@@ -124,11 +119,21 @@ namespace EntidadesAbstractas
             {
                 retorno = ValidarDni(nacionalidad, datoInt);
             }
-            else
-            {
-                //lanzar excepcion
-            }
+           
             return retorno;
+        }
+
+        private string ValidarNombreApellido(string dato)
+        {
+            string auxiliar = "";
+            foreach (char letra in dato)
+            {
+                if (char.IsLetter(letra) && !char.IsWhiteSpace(letra))
+                {
+                    auxiliar = dato;
+                }
+            }
+            return auxiliar;
         }
 
         public new string  ToString()

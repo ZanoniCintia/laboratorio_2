@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Entidades.Universidad;
 
-namespace Entidades
+namespace ClasesInstanciables
 {
     public class Jornada
     {

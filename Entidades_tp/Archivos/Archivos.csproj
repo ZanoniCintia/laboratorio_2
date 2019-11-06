@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9BBB12FC-D514-4217-ACE6-4CDF112F1838}</ProjectGuid>
+    <ProjectGuid>{DFEB57D0-E5BE-4C88-9E4C-374866AA0FCD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Entidades_tp</RootNamespace>
-    <AssemblyName>Entidades_tp</AssemblyName>
+    <RootNamespace>Archivos</RootNamespace>
+    <AssemblyName>Archivos</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,19 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Persona.cs" />
+    <Compile Include="IArchivo.cs" />
+    <Compile Include="Texto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Universitario.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Archivos\Archivos.csproj">
-      <Project>{dfeb57d0-e5be-4c88-9e4c-374866aa0fcd}</Project>
-      <Name>Archivos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Excepciones\Excepciones.csproj">
-      <Project>{0a08ddb7-bf2b-426e-9dbd-d8c0f0ffc726}</Project>
-      <Name>Excepciones</Name>
-    </ProjectReference>
+    <Compile Include="Xml.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
