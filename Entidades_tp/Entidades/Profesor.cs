@@ -33,6 +33,7 @@ namespace ClasesInstanciables
         private void _RandomClases()
         {
             int aux = random.Next(0, 3);
+            
             ClasesDelDia.Enqueue((EClases)aux);
             
 

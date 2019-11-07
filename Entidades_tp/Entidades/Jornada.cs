@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Entidades.Universidad;
+using static ClasesInstanciables.Universidad;
 
 namespace ClasesInstanciables
 {
@@ -17,18 +17,41 @@ namespace ClasesInstanciables
         #endregion
 
         #region Propiedades
+        
+
+        public List<Alumno> Alumnos
+        {
+            get { return alumnos; }
+            set { this.alumnos = value; }
+        }
+
+        public EClases Clase
+        {
+            get { return clase; }
+            set { clase = value; }
+        }
+
+        public Profesor Instructor
+        {
+            get { return instructor; }
+            set { this.instructor= value; }
+        }
+
+
+
 
         #endregion
 
         #region Metodos
         public bool Guardar(Jornada jornada)
         {
-            
+            bool retorno = false;
+            return retorno;
         }
 
         private Jornada()
         {
-            List<Alumno> alumnos = new List<>;
+            //List<Alumno> alumnos = new List<>;
         }
         public Jornada(EClases clase,Profesor instructor)
         {

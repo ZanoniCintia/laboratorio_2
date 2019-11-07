@@ -8,7 +8,7 @@ using EntidadesAbstractas;
 
 namespace ClasesInstanciables
 {
-    sealed class Alumno: Universitario
+    public sealed class Alumno: Universitario
     {
         #region Campos
         private Universidad.EClases claseQueToma;
