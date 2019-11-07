@@ -15,11 +15,12 @@ namespace ejercicio
             {
                 DAO.InsertarCliente("Joe", "Morello", "52917868");
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                Console.WriteLine(e.Message);
             }
+            Console.ReadKey();
         }
     }
 }
