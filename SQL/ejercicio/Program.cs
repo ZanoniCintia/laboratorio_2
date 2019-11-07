@@ -13,7 +13,7 @@ namespace ejercicio
         {
             try
             {
-                DAO.InsertarCliente("Joe", "Morello", "52917868");
+                DAO.InsertarCliente("Joe", "Morello", "52917868","13/01/19");
             }
             catch (Exception e)
             {
