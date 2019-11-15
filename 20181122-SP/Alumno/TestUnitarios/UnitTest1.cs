@@ -8,13 +8,22 @@ namespace TestUnitarios
     public class UnitTest1
     {
         [TestMethod]
-        //[ExpectedException(typeof(PatenteInvalidaException))]
+        
         public void ValidarPatente()
         {
-           // Patente p = new Patente("JMI890", Patente.Tipo.Mercosur);
-            string auxPatente = "jmi890";
+           
+            string auxPatente = "JMI890";
             Patente p= auxPatente.ValidarPatente();
             Assert.AreEqual(auxPatente,p.CodigoPatente);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(PatenteInvalidaException))]
+        public void ValidarEXcepcion()
+        {
+            string auxP = "JJ4584";
+            Patente p = auxP.ValidarPatente();
+            Assert.AreEqual(auxP, p.CodigoPatente);
         }
     }
 }
