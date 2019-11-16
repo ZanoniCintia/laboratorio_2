@@ -15,16 +15,16 @@ namespace Archivos
         public void  Guardar(string nombre, T datos)
         {
             XmlTextWriter writer = null;
-            try
-            {
+           // try
+            //{
                 writer = new XmlTextWriter(nombre, Encoding.UTF8);
                 XmlSerializer serializer = new XmlSerializer(typeof(T));
                 //TextWriter writer = new StreamWriter(archivo);
                 serializer.Serialize(writer, datos);
+                writer.Close();
 
-                
-            }
-            catch (Exception e)
+            //}
+            /*catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 
@@ -33,13 +33,13 @@ namespace Archivos
             {
                 if (!object.ReferenceEquals(writer, null))
                     writer.Close();
-            }
+            }*/
         }
         public void Leer(string nombre, out T datos)
         {
             XmlTextReader read = null;
-            try
-            {
+           // try
+           // {
                 read = new XmlTextReader(nombre);
                 XmlSerializer serializer = new XmlSerializer(typeof(T));
                 //TextReader writer = new StreamReader(archivo);
@@ -47,7 +47,7 @@ namespace Archivos
                 read.Close();
 
                 
-            }
+          /*  }
             catch (Exception)
             {
                 datos = default(T);
@@ -57,7 +57,7 @@ namespace Archivos
             {
                 if (!object.ReferenceEquals(read, null))
                     read.Close();
-            }
+            }*/
         }
     }
 }

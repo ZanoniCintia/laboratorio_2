@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Entidades;
 using Archivos;
+
 namespace TestUnitarios
 {
     [TestClass]
@@ -24,6 +25,17 @@ namespace TestUnitarios
             string auxP = "JJ4584";
             Patente p = auxP.ValidarPatente();
             Assert.AreEqual(auxP, p.CodigoPatente);
+            
         }
+
+        [TestMethod]
+        public void ValidaEXcGuardar()
+        {
+            string aux = "";
+            IArchivo<string> archivoTexto = new Texto();
+            archivoTexto.Leer("C:\\cintia\\laboratorio_2\\20181122-SP", out aux);
+            
+        }
+
     }
 }
